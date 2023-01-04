@@ -5,11 +5,12 @@ import {
   ScrollView,
   SafeAreaView,
   Dimensions,
+  Button,
 } from "react-native";
 import React from "react";
 import IndividualGroup from "./IndividualGroup";
 
-const Groups = ({ navigation }) => {
+const GroupList = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.header}>
@@ -52,4 +53,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Groups;
+export default GroupList;
