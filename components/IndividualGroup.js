@@ -7,10 +7,16 @@ import {
   Dimensions,
 } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const IndividualGroup = ({ groupDetails }) => {
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={styles.root}>
+    <TouchableOpacity
+      style={styles.root}
+      onPress={() => navigation.navigate("GroupHome", { id: "Jane" })}
+    >
       <View style={styles.leftView}>
         <Text style={styles.titleText}>{groupDetails.name}</Text>
         <Text style={styles.oweText}>You owe ${groupDetails.owe}</Text>

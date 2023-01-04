@@ -1,6 +1,15 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Groups from "./components/Groups";
+import GroupList from "./components/GroupList";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  SafeAreaView,
+  Dimensions,
+  Button,
+} from "react-native";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -11,8 +20,12 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Groups" component={Groups} />
+        <Stack.Screen name="GroupList" component={GroupList} />
+        <Stack.Screen name="GroupHome" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+const ProfileScreen = ({ navigation, route }) => {
+  return <Text>This is {route.params.id}'s profile</Text>;
+};
