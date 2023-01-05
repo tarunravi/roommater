@@ -25,7 +25,7 @@ const GroupList = ({ navigation }) => {
         >
           <IndividualGroup
             groupDetails={{
-              name: "Mogi",
+              name: "Mogi Home",
               pfp: "https://i.pinimg.com/736x/57/3f/22/573f22a1aa17b366f5489745dc4704e1.jpg",
               owe: 0,
               id: 0,

@@ -10,6 +10,7 @@ import {
   Dimensions,
   Button,
 } from "react-native";
+import GroupHome from "./components/GroupHome";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -21,11 +22,8 @@ export default function App() {
         }}
       >
         <Stack.Screen name="GroupList" component={GroupList} />
-        <Stack.Screen name="GroupHome" component={ProfileScreen} />
+        <Stack.Screen name="GroupHome" component={GroupHome} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-const ProfileScreen = ({ navigation, route }) => {
-  return <Text>This is {route.params.id}'s profile</Text>;
-};
